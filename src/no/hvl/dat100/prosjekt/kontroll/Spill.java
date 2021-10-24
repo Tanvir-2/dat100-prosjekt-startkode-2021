@@ -76,12 +76,16 @@ public class Spill {
 	 * av en klasse laget av gruppen (implementeres i oppgave 3).
 	 */
 	public void start() {
-
+		
+		bord.getBunkeFra().fjernAlle();
+		bord.getBunkeFra().leggTilAlle();
+		
 		KortUtils.stokk(bord.getBunkeFra());
 
 		delutKort();
+		
+		bord.leggNedBunkeTil(bord.getBunkeFra().taSiste());
 
-		bord.vendOversteFraBunke();
 	}
 
 	/**
@@ -91,8 +95,8 @@ public class Spill {
 	private void delutKort() {
 
 		for (int k=0; k<ANTALL_KORT_START; k++) {
-			nord.leggTilKort(bord.taOversteFraBunke());
-			syd.leggTilKort(bord.taOversteFraBunke());
+			nord.leggTilKort(bord.getBunkeFra().taSiste());
+			syd.leggTilKort(bord.getBunkeFra().taSiste());
 		}
 	}
 
