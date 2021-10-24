@@ -20,6 +20,7 @@ public class KortSamling {
 	/**
 	 * Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
 	 */
+	//test
 	public KortSamling() {
 
 		samling = new Kort[MAKS_KORT];

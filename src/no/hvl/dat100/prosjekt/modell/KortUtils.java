@@ -37,11 +37,11 @@ public class KortUtils {
 	 */
 	public static void stokk(KortSamling samling) {
 Random random = new Random();
-		
-        for (int i = samling.getSamling().length - 1; i > 0; i--) {
-          int j = random.nextInt(i);
+		int length = samling.getAllekort().length;
+        for (int i = length- 1; i > 0; i--) {
+          int j = random.nextInt(length);
 
-          Kort temp = samling.getSamling()[i];
+          Kort temp = samling.getAllekort()[i];
           samling.getSamling()[i]= samling.getSamling()[j];
           samling.getSamling()[j]= temp;
 		}

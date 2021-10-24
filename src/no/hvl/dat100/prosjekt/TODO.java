@@ -1,6 +1,7 @@
 package no.hvl.dat100.prosjekt;
 
 public class TODO {
+	//test
 
 	public static String method() {
 		
